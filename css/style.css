@@ -92,11 +92,13 @@ header .main .tools a .user {
     object-fit: cover;
     border-radius: 50%;
 }
-header .main .tools a .menu{
+
+header .main .tools a .menu {
     list-style: none;
     display: none;
 }
-header .main .tools a:focus .menu::before{
+
+header .main .tools a:focus .menu::before {
     content: "";
     display: inline-block;
     width: 20px;
@@ -109,17 +111,19 @@ header .main .tools a:focus .menu::before{
     box-shadow: -1px -1px 8px #dbdbdb;
     z-index: 1;
 }
-@keyframes show{
-    from{
+
+@keyframes show {
+    from {
         opacity: 0;
         transform: translateY(-50px);
     }
-    to{
+    to {
         opacity: 1;
         transform: translateY(0px);
     }
 }
-header .main .tools a:focus .menu{
+
+header .main .tools a:focus .menu {
     animation: show 0.4s forwards;
     list-style: none;
     display: block;
@@ -132,7 +136,8 @@ header .main .tools a:focus .menu{
     border-radius: 10px;
     box-shadow: 1px 1px 8px 0px #ECECEC;
 }
-header .main .tools a:focus .menu li{
+
+header .main .tools a:focus .menu li {
     position: relative;
     z-index: 2;
     background: white;
@@ -144,14 +149,54 @@ header .main .tools a:focus .menu li{
     align-items: center;
     border-radius: 10px;
 }
-header .main .tools a:focus .menu li svg{
+
+header .main .tools a:focus .menu.user-option li svg {
     margin-right: 12px;
 }
-header .main .tools a:focus .menu li:last-child{
+
+header .main .tools a:focus .menu.user-option li:last-child {
     margin-top: 15px;
     padding-bottom: 15px;
     border-top: 1px solid #DBDBDB;
     border-radius: 0px 0px 10px 10px;
+}
+
+header .main .tools a:focus .menu.noti-list {
+    width: 500px;
+}
+
+header .main .tools a:focus .menu.menu.noti-list li:last-child {
+    padding-bottom: 15px;
+}
+
+header .main .tools a:focus .menu.noti-list li .box-user {
+    flex-grow: 1;
+    display: flex;
+}
+
+header .main .tools a:focus .menu.noti-list li .box-user img {
+    height: 34px;
+    width: 34px;
+    border-radius: 50%;
+    margin-right: 12px;
+}
+
+header .main .tools a:focus .menu.noti-list li .box-user .about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+header .main .tools a:focus .menu.noti-list li .box-user .about h3 {
+    font-size: 13px;
+}
+
+header .main .tools a:focus .menu.noti-list li .box-user .about p {
+    font-size: 13px;
+}
+
+header .main .tools a:focus .menu.noti-list li .box-user .about p span {
+    color: #a5a7aa;
 }
 
 main {
